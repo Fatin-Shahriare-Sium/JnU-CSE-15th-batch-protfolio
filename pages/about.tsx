@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
-    return (
-        <div className='about'>
-            <div>
-                <p>This website is the memory of SSC 2021 batch of Bhangoora Biggan School and College.It is really a pleasure.The students of the batch are:
-                    Mostafizur Rahman Mehedi,Fatin Shahriare Sium,
-                </p>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="about">
+      <div>
+        <p>We are the JnU,CSE 15th batch</p>
+      </div>
+    </div>
+  );
+};
 
 export default About;

@@ -2,7 +2,6 @@ import React from "react";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 
-import { StudentDataResponses, UpdateProfileMutationResponses } from "../../generated/graphql";
 import Image from "next/image";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
@@ -34,7 +33,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 };
 
-const SingleStudent: React.FC<{ profileData: UpdateProfileMutationResponses }> = ({ profileData }) => {
+const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
   return (
     <div>
       <Head>

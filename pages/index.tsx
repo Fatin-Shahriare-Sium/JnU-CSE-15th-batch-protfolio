@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import SingleStudentPreview from "./component/single-student-preview";
 import OpenerOverlay from "./component/opener-overlay";
-import { StudentDataResponses } from "../generated/graphql";
 import Loading from "./component/loding";
 import dataBase from "./data/allStudents.json";
 const Index = () => {
-  let [studentDataToShow, setStudentDataToShow] = useState<StudentDataResponses[]>(dataBase);
+  let [studentDataToShow, setStudentDataToShow] = useState<[]>(dataBase);
   console.log(dataBase);
 
   function searchStudent(e: any) {
