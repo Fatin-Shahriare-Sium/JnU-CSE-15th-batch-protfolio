@@ -1,0 +1,90 @@
+.signle-image-preview__wrapper {
+  background-color: var(--card-back-color);
+  border-radius: 9px;
+  overflow: hidden;
+  width: 300px !important;
+  min-width: 300px;
+  padding: 0px !important;
+  //   @include media-breakpoint-down("md") {
+  //     width: 153px !important;
+  //   }
+}
+
+.signle-image-preview {
+  cursor: pointer;
+  position: relative;
+  // background: -moz-linear-gradient(-45deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(-45deg, #000000 0%,#000000 25%,#1e539e 50%,#ff3083 75%,#7800a8 100%); /* Chrome10-25,Safari5.1-6 */
+  // background: linear-gradient(135deg, #000000 0%,#000000 25%,#1e539e 50%,#ff3083 75%,#7800a8 100%);
+  // background-size: 400% 400%;
+  // background-repeat: no-repeat;
+  // cursor: pointer;
+  // transition: all .3s ease;
+  &:hover {
+    // background-position: 100% 100%;
+    .signle-image-preview__img {
+      .image {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.signle-image-preview__img {
+  position: relative;
+  overflow: hidden;
+  height: 253px;
+
+  & > div {
+    position: unset !important;
+  }
+
+  .image {
+    object-fit: cover;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    overflow: hidden;
+    transition: all 0.7s ease;
+  }
+  @include media-breakpoint-down("md") {
+    height: 147px;
+  }
+  // img{
+  //     width: 100%;
+
+  //     object-fit: contain;
+  //     border-radius: 9px;
+  //     // mix-blend-mode: screen;
+
+  // }
+}
+
+.signle-image-preview__details {
+  padding: 5px;
+  background-color: var (--card-back-color);
+  p {
+    color: var(--card-text-color);
+    font-weight: 500;
+    margin-bottom: 0rem !important;
+  }
+  p:nth-child(1) {
+    font-size: 2rem;
+    @include media-breakpoint-down("sm") {
+      font-size: 3rem;
+    }
+  }
+  p:nth-child(2) {
+    font-size: 1.8rem;
+
+    @include media-breakpoint-down("sm") {
+      font-size: 2.5rem;
+    }
+  }
+  p:nth-child(3) {
+    font-size: 1.7rem;
+    @include media-breakpoint-down("sm") {
+      font-size: 2.3rem;
+    }
+  }
+}
