@@ -32,7 +32,7 @@ const SingleStudentPreview: React.FC<{ name: string; uid: string; gmail: string;
         <p>👋 {name}</p>
         <p>🏫 {collegeName}</p>
         <p>🗺️ {address}</p>
-        <div style={{ display: "flex", flexDirection: "column", gap: "1rem", justifyContent: "center", alignItems: "center" }}>
+        <div className="signle-image-preview__details--bottom" style={{ display: "flex", flexDirection: "column", gap: "1rem", justifyContent: "center", alignItems: "center", marginTop: "2%" }}>
           <div style={{ display: "flex", gap: "2rem" }}>
             <a target="_blank" rel="noopener noreferrer" href={fbLink}>
               <img style={{ height: "32px", width: "32px" }} src={require("../../assets/facebook.svg")} alt="facebook" />

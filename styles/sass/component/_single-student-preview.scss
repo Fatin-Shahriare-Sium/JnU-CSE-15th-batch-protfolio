@@ -63,6 +63,9 @@
 .signle-image-preview__details {
   padding: 5px;
   background-color: var (--card-back-color);
+  @include media-breakpoint-down("sm") {
+    margin-top: 5%;
+  }
   p {
     color: var(--card-text-color);
     font-weight: 500;
@@ -88,5 +91,10 @@
     @include media-breakpoint-down("sm") {
       font-size: 2.3rem;
     }
+  }
+}
+.signle-image-preview__details--bottom {
+  @include media-breakpoint-down("sm") {
+    margin-top: 7% !important;
   }
 }
