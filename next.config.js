@@ -3,7 +3,7 @@ const withImages = require("next-images");
 module.exports = withImages({
   images: {
     disableStaticImages: true,
-    domains: ["res.cloudinary.com", "img.youtube.com"],
+    domains: ["res.cloudinary.com", "img.youtube.com", "scontent.fdac27-2.fna.fbcdn.net", "scontent.fdac27-2.fna.fbcdn.net"],
   },
   env: {
     URL: "http://localhost:5000/",

@@ -3,6 +3,7 @@ import Head from "next/head";
 import SingleStudentPreview from "./component/single-student-preview";
 import OpenerOverlay from "./component/opener-overlay";
 import Loading from "./component/loding";
+import BG from "../assets/bg.jpg";
 import dataBase from "./data/allStudents.json";
 const Index = () => {
   let [studentDataToShow, setStudentDataToShow] = useState<[]>(dataBase);
@@ -109,13 +110,13 @@ const Index = () => {
       </Head>
       <div className="homepage-main__image-wrapper">
         <div className="homepage-main__image">
-          <img src="https://media.istockphoto.com/photos/put-more-in-get-more-out-picture-id1291318636?b=1&k=20&m=1291318636&s=170667a&w=0&h=UvVIk7wwkN3X9OFm8gBlWWviV5vAjfrq2ejYP30JmnA=" alt="" />
+          <img src={BG} alt="" />
           <div className="homepage-main__image-details">
             <p>
-              The <span style={{ color: "#000" }}>Departure </span>SSC Batch 2021
+              The <span style={{ color: "#000" }}>CSE </span>15th Batch
             </p>
             <p> of</p>
-            <p style={{ color: "#1111cf" }}>Bhangoora Biggan School and College</p>
+            <p style={{ color: "#1111cf" }}>Jagannath University,Dhaka</p>
           </div>
         </div>
       </div>
@@ -126,7 +127,7 @@ const Index = () => {
         <div className="row homapage-main__content mt-5">
           {studentDataToShow ? (
             studentDataToShow!.map((sig, index) => {
-              return <SingleStudentPreview key={index} name={sig.name!} gmail={sig.gmail!} uid={sig.uid!} profileImg={sig.profileImg!} />;
+              return <SingleStudentPreview key={index} address={sig.address} collegeName={sig.collegeName} waNumber={sig.WANumber} fbLink={sig.FBLink} name={sig.name!} gmail={sig.gmail!} uid={sig.uid!} profileImg={sig.profileImg!} />;
             })
           ) : (
             <Loading />

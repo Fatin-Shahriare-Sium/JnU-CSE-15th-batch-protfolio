@@ -5,7 +5,7 @@ const Navbar = () => {
     <div className="navbar-wrapper">
       <div className="navbar">
         <div className="navbar-icon">
-          <img src={require("../../assets/logo.png")} alt="" />
+          <img style={{ height: "50px", width: "50px" }} src={require("../../assets/logoX.webp")} alt="" />
         </div>
         <div className="navbar-tab">
           <Link href="/">
