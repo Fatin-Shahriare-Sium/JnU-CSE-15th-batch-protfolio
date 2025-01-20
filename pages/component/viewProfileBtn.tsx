@@ -14,7 +14,7 @@ const ViewProfileButton = () => {
   };
 
   return (
-    <button style={{ ...buttonStyle, borderRadius: "5px", marginBottom: ".5rem" }} onClick={() => router.push("/student/1")}>
+    <button style={{ ...buttonStyle, borderRadius: "5px", marginBottom: ".5rem", marginTop: "5%" }} onClick={() => router.push("/student/1")}>
       View Profile
     </button>
   );
