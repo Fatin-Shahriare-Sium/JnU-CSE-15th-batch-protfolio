@@ -2,28 +2,33 @@ import React from "react";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 
+import dataBase from ".././data/allStudents.json";
 import Image from "next/image";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { id } = context.query;
+  const STU = dataBase.find((sig) => sig.Id == id);
+  console.log("context,", STU);
+
   let x = {
-    name: "aas",
-    profileImg: "https://img.youtube.com/vi/42Ekv1x_Qdo/maxresdefault.jpg",
+    name: STU?.name,
+    profileImg: STU?.profileImg,
     fathername: "md.mixanurr rahman",
-    rollNumber: "b230e0q",
+    rollNumber: STU?.Id,
     gmail: "sium12034yyud",
-    phoneNumber: "017100",
+    phoneNumber: STU?.WANumber,
     birthDate: "09/05/25",
     birthplace: "dwefc",
     currentlocation: "wafw",
     hobby: "gardeisnbac",
     studingAt: "fyxydqwd",
     studiedAt: "vaxyyujxc",
-    workingAs: "agyxujyc",
+    collegeNameofSTU: STU?.collegeName,
     socialLinks: {
-      facebook: "guxua",
-      twitter: "xahvcx",
-      tiktok: "agchwa",
-      youtube: "wxuyw",
+      facebook: STU?.FbLink,
+      wa: STU?.WANumber,
+      codeForce: "",
+      youtube: "",
     },
   };
   return {
@@ -64,22 +69,22 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
                 <p className="single-student__status">{profileData.workingAs}</p>
                 <div className="single-student__social-link-wrapper">
                   <div className="single-student__social-link">
-                    <a href={profileData.socialLinks?.facebook!}>
+                    <a target="_blank" href={profileData.socialLinks?.facebook!}>
                       <img src={require("../../assets/facebook.svg")} alt="" />
                     </a>
                   </div>
                   <div className="single-student__social-link">
-                    <a href={profileData.socialLinks?.twitter!}>
-                      <img src={require("../../assets/twitter.svg")} alt="" />
+                    <a target="_blank" href={`https://wa.me/${profileData.socialLinks?.wa!}`}>
+                      <img src={require("../../assets/whatsapp.svg")} alt="" />
                     </a>
                   </div>
                   <div className="single-student__social-link">
-                    <a href={profileData.socialLinks?.tiktok!}>
-                      <img src={require("../../assets/tiktok.svg")} alt="" />
+                    <a target="_blank" href={profileData.socialLinks?.codeForce}>
+                      <img src={require("../../assets/codeForce.png")} alt="" />
                     </a>
                   </div>
                   <div className="single-student__social-link">
-                    <a href={profileData.socialLinks?.youtube!}>
+                    <a target="_blank" href={profileData.socialLinks?.youtube!}>
                       <img src={require("../../assets/youtube.svg")} alt="" />
                     </a>
                   </div>
@@ -104,7 +109,7 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
                 </p>
                 <p style={{ fontWeight: "500" }}>
                   <span style={{ fontWeight: "700" }}>Phone Number: </span>
-                  {`0${profileData.phoneNumber}`}
+                  {`${profileData.phoneNumber}`}
                 </p>
                 <p style={{ fontWeight: "500" }}>
                   <span style={{ fontWeight: "700" }}>BirthDate: </span>
@@ -115,8 +120,8 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
                   {profileData.birthplace}
                 </p>
                 <p style={{ fontWeight: "500" }}>
-                  <span style={{ fontWeight: "700" }}>Working As: </span>
-                  {profileData.workingAs}
+                  <span style={{ fontWeight: "700" }}>College: </span>
+                  {profileData.collegeNameofSTU}
                 </p>
                 <p style={{ fontWeight: "500" }}>
                   <span style={{ fontWeight: "700" }}>Living At: </span>

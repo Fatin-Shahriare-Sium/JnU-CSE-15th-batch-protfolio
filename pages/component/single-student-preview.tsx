@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import fbIcon from "../../assets/facebook.svg";
 import ViewProfileButton from "./viewProfileBtn";
-const SingleStudentPreview: React.FC<{ name: string; uid: string; gmail: string; profileImg: string; waNumber: number; fbLink: string; collegeName: string; address: string }> = ({ name, profileImg, gmail, uid, fbLink, waNumber, collegeName, address }) => {
+const SingleStudentPreview: React.FC<{ name: string; STUId: string; gmail: string; profileImg: string; waNumber: number; fbLink: string; collegeName: string; address: string }> = ({ name, profileImg, gmail, STUId, fbLink, waNumber, collegeName, address }) => {
   function removeBottomLayer() {
     let bottomLayer = document.getElementById("signle-image-preview__details") as HTMLDivElement;
     bottomLayer.style.display = "none";
@@ -21,7 +21,7 @@ const SingleStudentPreview: React.FC<{ name: string; uid: string; gmail: string;
   return (
     <div className="signle-image-preview__wrapper">
       <div className="signle-image-preview">
-        <Link href={`/student/${uid}`}>
+        <Link href={`/student/${STUId}`}>
           <div id="signle-image-preview__img" className="signle-image-preview__img">
             <Image src={profileImg} layout={"fill"} className="image" alt={name}></Image>
             {/* <img src={profileImg} alt={name} /> */}
@@ -42,7 +42,7 @@ const SingleStudentPreview: React.FC<{ name: string; uid: string; gmail: string;
             </a>
           </div>
 
-          <ViewProfileButton />
+          <ViewProfileButton STUId={STUId} />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { useRouter } from "next/dist/client/router";
 import React from "react";
 
-const ViewProfileButton = () => {
+const ViewProfileButton = ({ STUId }: { STUId: string }) => {
   let router = useRouter();
   const buttonStyle = {
     backgroundColor: "#0d6ee3",
@@ -14,7 +14,7 @@ const ViewProfileButton = () => {
   };
 
   return (
-    <button style={{ ...buttonStyle, borderRadius: "5px", marginBottom: ".5rem", marginTop: "5%" }} onClick={() => router.push("/student/1")}>
+    <button style={{ ...buttonStyle, borderRadius: "5px", marginBottom: ".5rem", marginTop: "5%" }} onClick={() => router.push(`/student/${STUId}`)}>
       View Profile
     </button>
   );

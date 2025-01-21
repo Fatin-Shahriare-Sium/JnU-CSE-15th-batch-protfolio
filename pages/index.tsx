@@ -127,7 +127,7 @@ const Index = () => {
         <div className="row homapage-main__content mt-5">
           {studentDataToShow ? (
             studentDataToShow!.map((sig, index) => {
-              return <SingleStudentPreview key={index} address={sig.address} collegeName={sig.collegeName} waNumber={sig.WANumber} fbLink={sig.FBLink} name={sig.name!} gmail={sig.gmail!} uid={sig.uid!} profileImg={sig.profileImg!} />;
+              return <SingleStudentPreview key={index} address={sig.address} STUId={sig.Id} collegeName={sig.collegeName} waNumber={sig.WANumber} fbLink={sig.FbLink} name={sig.name!} gmail={sig.gmail!} uid={sig.uid!} profileImg={sig.profileImg!} />;
             })
           ) : (
             <Loading />

@@ -3,6 +3,8 @@
   background-repeat: no-repeat;
   height: max-content;
   max-height: 90vh;
+  //background-color: red;
+  overflow: hidden;
   background-color: var(--img-overlay-color);
   img {
     width: 100%;
@@ -47,7 +49,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   @include media-breakpoint-down("md") {
     justify-content: center;
   }
@@ -62,11 +63,13 @@
   width: 70%;
   padding: 5px;
   margin: auto;
+  z-index: 100;
   input {
     height: 5vh;
     font-size: 2.3rem;
     width: 100%;
     padding: 3px;
+    border: 1px solid black;
   }
   @include media-breakpoint-down("sm") {
     margin-top: 4rem;
