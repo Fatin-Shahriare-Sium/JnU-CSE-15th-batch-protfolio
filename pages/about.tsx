@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="about">
       <div>
-        <p>We are the JnU,CSE 15th batch</p>
+        <p>HI,We are the JnU,CSE 15th batch.</p>
       </div>
     </div>
   );
