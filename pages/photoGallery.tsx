@@ -2,11 +2,12 @@ import Image from "next/image";
 import React from "react";
 import { useCallback, useState } from "react";
 import dynamic from "next/dynamic";
-const ImageViewer = dynamic(() => import("react-simple-image-viewer"), {
-  loading: () => <p>Loading...</p>,
-});
 
 const PhotoGallery = () => {
+  const ImageViewer = dynamic(() => import("react-simple-image-viewer"), {
+    loading: () => <p>Loading...</p>,
+  });
+
   const d = new Date();
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
