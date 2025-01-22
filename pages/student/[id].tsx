@@ -104,6 +104,10 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
                   {profileData.fathername}
                 </p>
                 <p style={{ fontWeight: "500" }}>
+                  <span style={{ fontWeight: "700" }}>ID: </span>
+                  {profileData.rollNumber}
+                </p>
+                <p style={{ fontWeight: "500" }}>
                   <span style={{ fontWeight: "700" }}>Gmail: </span>
                   {profileData.gmail}
                 </p>
@@ -116,7 +120,7 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
                   {profileData.birthDate}
                 </p>
                 <p style={{ fontWeight: "500" }}>
-                  <span style={{ fontWeight: "700" }}>BirthPlace: </span>
+                  <span style={{ fontWeight: "700" }}>Hometown: </span>
                   {profileData.birthplace}
                 </p>
                 <p style={{ fontWeight: "500" }}>
@@ -124,17 +128,19 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
                   {profileData.collegeNameofSTU}
                 </p>
                 <p style={{ fontWeight: "500" }}>
+                  <span style={{ fontWeight: "700" }}>School: </span>
+                  {profileData.studingAt}
+                </p>
+
+                <p style={{ fontWeight: "500" }}>
                   <span style={{ fontWeight: "700" }}>Living At: </span>
                   {profileData.currentlocation}
                 </p>
                 <p style={{ fontWeight: "500" }}>
-                  <span style={{ fontWeight: "700" }}>Studing At: </span>
-                  {profileData.studingAt}
+                  <span style={{ fontWeight: "700" }}>Blood Group: </span>
+                  B+
                 </p>
-                <p style={{ fontWeight: "500" }}>
-                  <span style={{ fontWeight: "700" }}>Studied At: </span>
-                  {profileData.studiedAt}
-                </p>
+
                 <p style={{ fontWeight: "500" }}>
                   <span style={{ fontWeight: "700" }}>Hobby: </span>
                   {profileData.hobby}

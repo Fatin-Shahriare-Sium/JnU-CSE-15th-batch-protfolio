@@ -18,6 +18,7 @@
   position: relative;
   overflow: hidden;
   height: 90vh;
+  background-color: var(--img-overlay-color);
   @include media-breakpoint-down("md") {
     height: 50vh !important;
   }
@@ -36,6 +37,7 @@
     position: relative !important;
     height: 100% !important;
     overflow: hidden;
+    mix-blend-mode: screen;
     transition: all 0.7s ease;
   }
 }
