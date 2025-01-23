@@ -200,22 +200,21 @@
     "codeForceIdLink": "https://codeforces.com/profile/MahfuzNahid",
     "githubLink": "https://github.com/mahfuznahid"
   },
-
   {
     "name": " Md Jewel Rana ",
     "Id": "B230305021",
     "gmail": " cse.md.jewelrana@gmail ",
-    " phoneNumber": "01979255951",
+    "phoneNumber": "01979255951",
     "profileImg": "https://res.cloudinary.com/dgtdqvxdf/image/upload/v1737648530/download_o8mh5k.jpg",
     "address": " Sirajganj ",
-    " currentAddress": "kolta bazar",
-    "cllegeName": " Dr.Shams Uddin Salama Memorial College ",
-    " schoolName": "Mugbelai Luthfia high school ",
-    " bloodGroup": "A+",
+    "currentAddress": "kolta bazar",
+    "collegeName": " Dr.Shams Uddin Salama Memorial College ",
+    "schoolName": "Mugbelai Luthfia high school ",
+    "bloodGroup": "A+",
     "hobby": " study",
-    "Fblink": " Jewel Rana ",
+    "FbLink": " Jewel Rana ",
     "WANumber": "+8801979255951",
-    "codeForceldLink": " cserana",
+    "codeForceIdLink": "cserana",
     "githubLink": ""
   },
   {
@@ -371,6 +370,23 @@
     "WANumber": "+8801710633266",
     "codeForceIdLink": "https://codeforces.com/profile/Lucifer_TheFallenAngel",
     "githubLink": ""
+  },
+  {
+    "name": "Minhajul Islam ",
+    "Id": "B230305043",
+    "gmail": "minhajul255685islam@gmail.com",
+    "phoneNumber": "01825568543",
+    "profileImg": "https://res.cloudinary.com/dgtdqvxdf/image/upload/v1737658272/bd7b057b-7540-4f7f-ad01-c5100cc7e0bd_sbvglu.jpg",
+    "address": "Abvoynagor, Jashore",
+    "currentAddress": "Azimpur, Dhaka",
+    "collegeName": "Pairahat United College",
+    "schoolName": "Pairahat High School",
+    "bloodGroup": "O+ve",
+    "hobby": "Reading Book",
+    "FbLink": "https://www.facebook.com/Minhajul.43 ",
+    "WANumber": "+8801825568543",
+    "codeForceIdLink": "",
+    "githubLink": "https://github.com/Minhajul43/Most-common-C-problem.git"
   },
   {
     "name": "Rabeya Boshry Oishi ",
