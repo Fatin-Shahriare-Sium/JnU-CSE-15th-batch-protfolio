@@ -108,6 +108,7 @@ const Index = () => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+        <title>Jagannath University,CSE 15th batch</title>
       </Head>
       <div className="homepage-main__image-wrapper">
         <div className="homepage-main__image">

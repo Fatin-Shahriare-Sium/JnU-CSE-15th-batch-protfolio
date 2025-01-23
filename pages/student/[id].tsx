@@ -13,22 +13,20 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   let x = {
     name: STU?.name,
     profileImg: STU?.profileImg,
-    fathername: "md.mixanurr rahman",
     rollNumber: STU?.Id,
-    gmail: "sium12034yyud",
-    phoneNumber: STU?.WANumber,
-    birthDate: "09/05/25",
-    birthplace: "dwefc",
-    currentlocation: "wafw",
-    hobby: "gardeisnbac",
-    studingAt: "fyxydqwd",
-    studiedAt: "vaxyyujxc",
+    gmail: STU?.gmail,
+    phoneNumber: STU?.phoneNumber,
+    currentlocation: STU?.currentAddress,
+    hobby: STU?.hobby,
+    hometown: STU?.address,
+    bloodGroup: STU?.bloodGroup,
     collegeNameofSTU: STU?.collegeName,
+    schoolName: STU?.schoolName,
     socialLinks: {
       facebook: STU?.FbLink,
       wa: STU?.WANumber,
-      codeForce: "",
-      youtube: "",
+      codeForce: STU?.codeForceIdLink,
+      github: STU?.githubLink,
     },
   };
   return {
@@ -47,15 +45,15 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Poppins:wght@500&display=swap" rel="stylesheet" />
         <title>{`${profileData.name!} -The Departure SSC Batch 2021 of Bhangoora Biggan School and College`}</title>
         <meta content={profileData.name!} name="description" />
-        <meta property="og:title" content={`${profileData.name!} - The Departure SSC Batch 2021 of Bhangoora Biggan School and College  `} />
-        <meta property="og:description" content={`${profileData.name!} -one of the students of The Departure SSC Batch 2021 of Bhangoora Biggan School and College`} />
+        <meta property="og:title" content={`${profileData.name!} - Jagannath University,CSE 15th batch  `} />
+        <meta property="og:description" content={`${profileData.name!} -one of the students of Jagannath University,CSE 15th batch`} />
         <meta property="og:image" content={profileData.profileImg!} />
         <meta property="og:image:alt" content={profileData.name!} />
         <meta property="og:url" content="" />
         <meta property="og:type" content="article" />
-        <meta property="twitter:title" content={`${profileData.name!} -The Departure SSC Batch 2021 of Bhangoora Biggan School and College`} />
+        <meta property="twitter:title" content={`${profileData.name!} - Jagannath University,CSE 15th batch`} />
         <meta property="twitter:image" content={profileData.profileImg!} />
-        <meta property="twitter:description" content={`${profileData.name!} -one of the students of The Departure SSC Batch 2021 of Bhangoora Biggan School and College`} />
+        <meta property="twitter:description" content={`${profileData.name!} -one of the students of Jagannath University,CSE 15th batch`} />
         <meta property="twitter:card" content="summary_large_image" />
       </Head>
       <div className="signle-student__wrapper container-fluid">
@@ -84,8 +82,8 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
                     </a>
                   </div>
                   <div className="single-student__social-link">
-                    <a target="_blank" href={profileData.socialLinks?.youtube!}>
-                      <img src={require("../../assets/youtube.svg")} alt="" />
+                    <a target="_blank" href={profileData.socialLinks?.github!}>
+                      <img src={require("../../assets/github.svg")} alt="" />
                     </a>
                   </div>
                 </div>
@@ -100,10 +98,6 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
 
               <div className="single-student__details-other">
                 <p style={{ fontWeight: "500" }}>
-                  <span style={{ fontWeight: "700" }}>Father Name: </span>
-                  {profileData.fathername}
-                </p>
-                <p style={{ fontWeight: "500" }}>
                   <span style={{ fontWeight: "700" }}>ID: </span>
                   {profileData.rollNumber}
                 </p>
@@ -115,13 +109,10 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
                   <span style={{ fontWeight: "700" }}>Phone Number: </span>
                   {`${profileData.phoneNumber}`}
                 </p>
-                <p style={{ fontWeight: "500" }}>
-                  <span style={{ fontWeight: "700" }}>BirthDate: </span>
-                  {profileData.birthDate}
-                </p>
+
                 <p style={{ fontWeight: "500" }}>
                   <span style={{ fontWeight: "700" }}>Hometown: </span>
-                  {profileData.birthplace}
+                  {profileData.hometown}
                 </p>
                 <p style={{ fontWeight: "500" }}>
                   <span style={{ fontWeight: "700" }}>College: </span>
@@ -129,7 +120,7 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
                 </p>
                 <p style={{ fontWeight: "500" }}>
                   <span style={{ fontWeight: "700" }}>School: </span>
-                  {profileData.studingAt}
+                  {profileData.schoolName}
                 </p>
 
                 <p style={{ fontWeight: "500" }}>
@@ -138,7 +129,7 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
                 </p>
                 <p style={{ fontWeight: "500" }}>
                   <span style={{ fontWeight: "700" }}>Blood Group: </span>
-                  B+
+                  {profileData.bloodGroup}
                 </p>
 
                 <p style={{ fontWeight: "500" }}>
