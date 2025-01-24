@@ -48,7 +48,7 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
         <meta property="og:title" content={`${profileData.name!} - Jagannath University,CSE 15th batch  `} />
         <meta property="og:description" content={`${profileData.name!} -one of the students of Jagannath University,CSE 15th batch`} />
         <meta property="og:image" content={profileData.profileImg!} />
-        <meta property="og:image:alt" content={profileData.name!} />
+        <meta property="og:image:alt" content={profileData.name} />
         <meta property="og:url" content="" />
         <meta property="og:type" content="article" />
         <meta property="twitter:title" content={`${profileData.name!} - Jagannath University,CSE 15th batch`} />
