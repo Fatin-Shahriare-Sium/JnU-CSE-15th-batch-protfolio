@@ -17,9 +17,9 @@ export default function TypewriterEffect({ textx }: { textx: string }) {
   }, [index]);
 
   return (
-    <div className="text-2xl font-bold text-center mt-10">
+    <p>
       {displayText}
-      <span className="animate-blink">|</span>
-    </div>
+      <span className="animate-blink"> |</span>
+    </p>
   );
 }
