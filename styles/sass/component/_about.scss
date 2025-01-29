@@ -1,14 +1,31 @@
-.about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    div{
-        width: 90%;
-    }
-    p{
-        font-size: 3rem;
-        font-weight: 700;
-        font-family:'robot',sans-serif;
-    }
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    width: 90%;
+  }
+  p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: "robot", sans-serif;
+    color: #00274d;
+    text-align: justify;
+  }
+}
+.about-img_container {
+  @include media-breakpoint-down("md") {
+    height: 30vh !important;
+  }
+  @include media-breakpoint-down("sm") {
+    height: 30vh !important;
+  }
+}
+.about-image {
+  width: 100% !important;
+  position: relative !important;
+  height: 100% !important;
+  overflow: hidden;
+  transition: all 0.7s ease;
 }

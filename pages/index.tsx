@@ -113,6 +113,7 @@ const Index = () => {
         <meta property="og:description" content="This website contains the information of all students of CSE 15th batch of Jagannath University,Dhaka"></meta>
         <meta property="og:type" content="website"></meta>
         <meta property="og:image" content="https://res.cloudinary.com/dgtdqvxdf/image/upload/v1737831005/anime_style_bg_rzfwwa.jpg"></meta>
+        <meta property="og:image:alt" content="Jagannath University,CSE 15th batch"></meta>
         <meta property="og:url" content="https://jn-u-cse-15th-batch-protfolio.vercel.app/"></meta>
         <meta property="twitter:site" content="@JagannathUniversity,CSE15th"></meta>
         <meta property="twitter:card" content="summary_large_image"></meta>
