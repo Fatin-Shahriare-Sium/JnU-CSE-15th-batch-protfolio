@@ -43,7 +43,7 @@ const SingleStudent: React.FC<{ profileData: any }> = ({ profileData }) => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Poppins:wght@500&display=swap" rel="stylesheet" />
-        <title>{`${profileData.name!} -The Departure SSC Batch 2021 of Bhangoora Biggan School and College`}</title>
+        <title>{`${profileData.name!} - Jagannath University,CSE 15th batch`}</title>
         <meta content={profileData.name!} name="description" />
         <meta property="og:title" content={`${profileData.name!} - Jagannath University,CSE 15th batch  `} />
         <meta property="og:description" content={`${profileData.name!} -one of the students of Jagannath University,CSE 15th batch`} />
